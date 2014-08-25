@@ -14,7 +14,7 @@
 > - *For each feature, how do you plan to implement it?*
 
 
-###Statement: I (Jun Liu) agree this project to be forked on 14.02.2014 17:34 by Erik Enomaa.
+###Website link: fotomemo.herokuapp.com
 
 <hr><hr>
 # Final submission infomation
@@ -63,7 +63,6 @@ Views -> login related views.
 4. User can also share, order and delete the album when in the “/album” page. 
 5. User can view all the the order history and account information by clicking the username in the navigation bar.
 
-###The link to heroku: fotomemo.herokuapp.com
 
 
 
@@ -223,12 +222,6 @@ URL | Action / View
 is the album url and as a result only one user can have an album called "Florida Trip"*
 
 
-
-<hr><hr>
-# Mockups
-![Album View](Fotosynteesi/readme_files/album_view.jpg?raw=true)
-![Page View](Fotosynteesi/readme_files/page_view.jpg?raw=true)
-![Layout Selection View](Fotosynteesi/readme_files/layout_selection.jpg?raw=true)
 
 <hr><hr>
 # Implementation Order
