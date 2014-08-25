@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}"/>
+{% endblock %}
+
+{% block title %}Homepage{% endblock %}
+{% block navbar-active-home %}active{% endblock %}
+
+{% block content %}
+
+	<div class="fotosynteesihome">
+        <h2>Welcom to Fotomemo</h2>
+        <br>
+        <p class="lead">Fotomemo is a website help you to make your own album. You can share and order your personalized albums easily. Sign up and check more details.</p>
+        <br>
+        <p><a class="btn btn-lg btn-success" href="/register/" role="button">Sign up</a></p>
+    </div>
+
+    <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Share on Facebook</h4>
+          <p>Share on Facebook is simple by just click the share link.</p>
+
+          <h4>Order</h4>
+          <p>Order your album by one-click pay on our own payment system.</p>
+
+        </div>
+
+
+	</div>
+{% endblock %}

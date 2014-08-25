@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}"/>
+{% endblock %}
+
+{% block title %}Photo List{% endblock %}
+{% block navbar-active-album %}active{% endblock %}
+
+{% block content %}
+
+		{% ifequal  layoutstyle "1"%}
+
+
+		<div id="trash" class="ui-widget-content grid_8 trash">
+		    
+		</div>
+
+		{% endifequal %}
+
+		{% ifequal  layoutstyle "2"%}
+
+		<div class="first-row">
+			<div id="trash1" class="ui-widget-content grid_8 trash" >
+			    
+			</div>
+
+			
+			<div id="trash2" class="ui-widget-content grid_8 trash">
+			    
+			</div>
+		</div>
+		<div class="second-row">
+			<div id="trash3" class="ui-widget-content grid_8 trash" >
+			    
+			</div>
+
+			<div id="trash4" class="ui-widget-content grid_8 trash">
+			    
+			</div>
+		</div>
+
+
+		{% endifequal %}
+
+		<div class="imagepool" >
+
+		<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+		{% if images %}
+					
+					{% for image in images %}
+		  <li class="ui-widget-content ui-corner-tr"  id="{{ image.id }}">
+		      <img src="{{ image.remote_path }}" width="96" height="72" />
+		     
+		  </li>
+		   {% endfor %}
+				
+				{% else %}
+					<p>No images.</p>
+				{% endif %}
+		       
+		</ul>
+
+		<form role="form" action="{% url "photoadd" album.title page.number page.layout%}" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="form-group photoadd-form">
+					    <!-- <label for="selectphoto">Select a photo: </label> -->
+					    <label for="enterphotourl">Enter a photo URL: </label>
+					    <!-- <input type="file" id="exampleInputFile" accept="image" name="imgfile" size="40"> -->
+					    <input type="text" name="imgurl" size="40">
+					    <br>
+					    <input class="btn btn-default" type="submit" value="Add">
+					</div>
+
+				</form>
+
+
+		</div>
+		
+{% endblock %}
